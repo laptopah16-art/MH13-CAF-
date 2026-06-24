@@ -1,0 +1,138 @@
+Build a multi-page premium café website "MH13 CAFÉ" 
+using pure HTML, CSS, JS. No React. No frameworks. 
+No build tools. 6 separate HTML pages linked by nav.
+
+🎨 COLORS (strict):
+- Primary: #AB1509 (Deep Rich Red)
+- Background: #fff7d3 (Soft Yellow)  
+- Dark: #1a0a00
+- Text: #2b0d05
+- Cards: #f5e6c8
+
+✍️ TYPOGRAPHY (Google Fonts):
+- Display: "Playfair Display" — all headings
+- Body: "Jost" — nav, paragraphs
+- Accent: "Dancing Script" — eyebrows, quotes
+- H1: clamp(3rem, 7vw, 6.5rem), weight 700
+- Labels: uppercase, letter-spacing 0.14em
+
+🖼️ IMAGES & VIDEO STRATEGY:
+Use Unsplash direct embed URLs (no API needed):
+- Hero video bg: use a full-viewport HTML5 <video> 
+  tag with this free source technique: 
+  poster image from Unsplash, autoplay muted loop
+- Use these real Unsplash URLs throughout:
+  * Coffee close-up: 
+    https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200
+  * Café interior: 
+    https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200
+  * Barista: 
+    https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800
+  * Pastry: 
+    https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=800
+  * Latte art: 
+    https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?w=800
+  * Café outdoor: 
+    https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1200
+
+📄 6 PAGES:
+
+--- index.html (HOME) ---
+- STICKY NAV: logo "MH13 CAFÉ" Playfair #AB1509, 
+  links to all 6 pages in Jost. Hamburger mobile.
+  On scroll: #fff7d3 bg + #AB1509 bottom border.
+- HERO: Full viewport VIDEO background (coffee shop 
+  ambiance feel using poster image fallback). Dark 
+  overlay 50%. Centered white text:
+  Dancing Script eyebrow "Est. 2024 · Pune"
+  Playfair italic H1: "Where Every Sip Tells a Story"
+  Jost subline. Two buttons. Staggered CSS load 
+  animation: eyebrow→words→subline→buttons.
+- ABOUT STRIP: #AB1509 bg. White Playfair italic 
+  quote. Jost body. Scroll reveal fade.
+- FEATURED MENU: 3 cards with Unsplash images, 
+  hover lifts + red left border. Link to menu.html
+- GALLERY PREVIEW: 4-image masonry CSS grid using 
+  Unsplash URLs. Hover: image scales 1.05, dark 
+  overlay with "View Gallery" text appears.
+- TESTIMONIALS: 3 quotes carousel, auto 4s.
+- FOOTER: #1a0a00 bg. Logo, links, social, copyright.
+
+--- menu.html (MENU) ---
+- Hero: Unsplash coffee image, text overlay 
+  "Our Menu" Playfair italic white
+- 4 category tabs: Espresso / Pour Over / 
+  Pastries / Seasonal. Active = #AB1509 pill.
+- Items grid: image + name + desc + price.
+  Unsplash images per category. Fade tab switch.
+- Each item card hover: lifts, red accent border.
+
+--- story.html (OUR STORY) ---
+- Full-width Unsplash café interior image hero 
+  with parallax scroll effect (CSS only, 
+  background-attachment: fixed)
+- Timeline: vertical line in #AB1509, 4 milestones 
+  with year in Playfair bold, desc in Jost.
+  Scroll-triggered: each milestone slides in 
+  alternating left/right.
+- Team section: 3 circular Unsplash barista photos, 
+  name in Playfair, role in Jost uppercase.
+- Values: 3 columns, icon (CSS shape) + Playfair 
+  title + Jost desc.
+
+--- gallery.html (GALLERY) ---
+- Masonry CSS grid, 12 Unsplash images (mix of 
+  coffee, interior, food, barista).
+- Click image: lightbox opens (JS), dark overlay, 
+  prev/next arrows in #ECBC6B, close X.
+- Filter buttons: All / Coffee / Food / Interior.
+  Filter click: smooth fade out/in of cards.
+
+--- reservations.html (RESERVATIONS) ---
+- Hero: Unsplash café table image, overlay text 
+  "Reserve Your Table"
+- Booking form: name, email, date, time, guests, 
+  special requests. All styled in #fff7d3/#AB1509.
+  Focus states: #AB1509 border glow.
+  Submit button: #AB1509 fill, hover darkens.
+  JS validation with inline error messages in red.
+- Info cards: Hours, Location, Phone. 
+  Icons: CSS-drawn. Cards: #f5e6c8 bg.
+
+--- contact.html (CONTACT) ---
+- Two columns: left = contact form, 
+  right = embedded Google Map iframe (Pune) + 
+  address + phone + email in Playfair/Jost mix.
+- Social links: large hover-animated icons 
+  (CSS drawn circles), #AB1509 fill on hover.
+- FAQ accordion: 5 questions, click to expand, 
+  smooth max-height transition, #AB1509 arrow 
+  rotates 180deg.
+
+⚡ GLOBAL ANIMATION RULES:
+- Scroll reveals all pages: IntersectionObserver 
+  opacity 0→1 + translateY 20px→0, 0.6s ease-out
+- Transitions: cubic-bezier(0.4, 0, 0.2, 1)
+- Hover max 0.2s, scale never above 1.05
+- Image lazy loading: loading="lazy" on all <img>
+- NO parallax jitter, NO glitch, NO bounce
+
+🚫 AVOID:
+- No React, no Vite, no npm — pure HTML files
+- No glassmorphism, no neon glow
+- No AI-looking gradient mesh backgrounds
+- No emoji in headings
+- Editorial whitespace throughout
+- Every page must feel hand-crafted, not templated
+
+📱 MOBILE ALL PAGES:
+- Single column, hamburger nav overlay #AB1509
+- Images full width, no overflow
+- Forms single column
+
+OUTPUT: 6 complete .html files (index, menu, story, 
+gallery, reservations, contact). Shared CSS in 
+<style> per file or one linked style.css.
+All JS inline per page. Google Fonts CDN only.
+Zero TODOs. Production-ready. Real images, real 
+video poster. No placeholders.
