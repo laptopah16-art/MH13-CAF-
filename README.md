@@ -1,3 +1,5 @@
+LIVE : https://mh-13-caf.vercel.app/
+
 # ☕ MH13 CAFÉ
 
 A modern, responsive café website built with React, TypeScript, and Vite. Designed to deliver a premium digital experience with elegant visuals, interactive sections, smooth animations, and a user-friendly interface.
@@ -151,12 +153,7 @@ npm run preview
 
 ### Website
 
-Add your Vercel URL here:
-
-```text
-https://your-project-name.vercel.app
-```
-
+Add your Vercel URL here: https://mh-13-caf.vercel.app/
 
 
 ## 🎯 Learning Outcomes
